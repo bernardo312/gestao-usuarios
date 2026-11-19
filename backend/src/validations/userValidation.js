@@ -7,7 +7,7 @@ export function validateUser(body, isUpdate = false) {
 
   const name = typeof body.name === 'string' ? body.name.trim() : '';
   const email = typeof body.email === 'string' ? body.email.trim().toLowerCase() : '';
-  const login = typeof body.login === 'string' ? body.login.trim() : '';
+  const login = typeof body.login === 'string' ? body.login.trim().toLowerCase() : '';
   const password = body.password;
 
   if (name.length < 3) {
