@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../index.css">
+  <title>Registrar Usuário</title>
+</head>
+
+<body>
+  <form>
+    <h1 class="form-title" id="titulo">Registrar Usuário</h1>
+
+    <div id="mensagem" class="mensagem"></div>
+
+    <div class="form-field">
+      <div><label for="name">Nome:</label></div>
+      <input type="text" id="name" placeholder="Nome" required>
+      <div class="error" id="nome-erro">O nome deve conter pelo menos 3 caracteres</div>
+    </div>
+
+    <div class="form-field">
+      <div><label for="email">Email:</label></div>
+      <input type="email" id="email" placeholder="Email" required>
+      <div class="error" id="email-erro">Email inválido</div>
+    </div>
+
+    <div class="form-field">
+      <div><label for="login">Login:</label></div>
+      <input type="text" id="login" placeholder="Login" required>
+      <div class="error" id="login-erro">O login deve conter pelo menos 3 caracteres</div>
+    </div>
+
+    <div class="form-field">
+      <div><label for="password">Senha:</label></div>
+      <input type="password" id="password" placeholder="Senha" required>
+      <small class="dica" id="senha-dica">Deixe em branco para manter a senha atual.</small>
+      <div class="error" id="password-erro">A senha precisa ter pelo menos 8 caracteres</div>
+    </div>
+
+    <div class="form-field">
+      <label><input type="checkbox" id="active" checked style="width:auto"> Usuário ativo</label>
+    </div>
+
+    <div>
+      <button type="button" id="registrar" disabled>Registrar</button>
+    </div>
+    <a href="../home/home.html">Voltar</a>
+  </form>
+
+  <script src="https://www.gstatic.com/firebasejs/13.3.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/13.3.0/firebase-auth-compat.js"></script>
+  <script src="../../firebase-init.js"></script>
+  <script src="../../authguard.js"></script>
+  <script src="../../loading.js"></script>
+  <script type="module" src="cadastrarUser.js"></script>
+</body>
+
+</html>

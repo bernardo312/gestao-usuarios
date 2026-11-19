@@ -1,0 +1,402 @@
+/* Fontes: Satoshi e, se não carregar, Plus Jakarta Sans */
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F4F4F4;
+  color: #002726;
+  font-family: 'Satoshi', 'Plus Jakarta Sans', Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+a {
+  color: #40615E;
+  font-weight: 500;
+}
+
+.centralize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Formulários */
+form {
+  width: 100%;
+  max-width: 400px;
+  margin: 24px 16px;
+  padding: 32px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+}
+
+.form-field {
+  margin-bottom: 16px;
+}
+
+label {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-top: 4px;
+  border: 1px solid #B9C9C9;
+  border-radius: 999px;
+  background-color: #FFFFFF;
+  color: #002726;
+  font-family: 'Satoshi', 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* roxo só no foco */
+input:focus {
+  outline: 2px solid #7F76FF;
+  outline-offset: 1px;
+  border-color: #7F76FF;
+}
+
+input[type="checkbox"] {
+  accent-color: #002726;
+  margin-right: 6px;
+}
+
+.error {
+  display: none;
+  margin-top: 4px;
+  padding-left: 16px;
+  color: #B42318;
+  font-size: 14px;
+}
+
+.dica {
+  display: none;
+  margin-top: 4px;
+  padding-left: 16px;
+  color: #40615E;
+  font-size: 13px;
+}
+
+/* Botões */
+button,
+.botao {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 24px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 999px;
+  background-color: #93F574;
+  color: #002726;
+  font-family: 'Satoshi', 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover,
+.botao:hover {
+  background-color: #84DD68;
+}
+
+button:focus-visible,
+.botao:focus-visible {
+  outline: 2px solid #7F76FF;
+  outline-offset: 2px;
+}
+
+button[disabled],
+button[disabled]:hover {
+  background-color: #E3EBEB;
+  color: #40615E;
+  cursor: not-allowed;
+}
+
+/* Excluir e Sair */
+.clean {
+  background-color: transparent;
+  color: #B42318;
+  border: 1px solid #B42318;
+}
+
+.clean:hover {
+  background-color: #FDECEC;
+}
+
+/* Lista (home) */
+.home {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 24px 16px;
+}
+
+.topo {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 24px 32px;
+  border-radius: 16px;
+  background-color: #002726;
+}
+
+/* título com degradê verde para branco */
+.topo h1 {
+  margin: 0;
+  background: linear-gradient(90deg, #93F574, #FFFFFF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.acoes-topo {
+  display: flex;
+  gap: 12px;
+}
+
+.acoes-topo .botao,
+.acoes-topo button {
+  width: auto;
+  margin-bottom: 0;
+}
+
+/* Sair no fundo escuro */
+.topo .clean {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.topo .clean:hover {
+  background-color: #40615E;
+}
+
+.pesquisa {
+  flex: 1;
+  min-width: 180px;
+  max-width: 320px;
+  margin-top: 0;
+  border: none;
+}
+
+.tabela-container {
+  width: 100%;
+  max-width: 960px;
+  margin-top: 16px;
+  overflow-x: auto;
+  /* no celular a tabela rola para o lado */
+  background-color: #FFFFFF;
+  border-radius: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 14px 16px;
+  text-align: left;
+}
+
+th {
+  background-color: #E3EBEB;
+  color: #40615E;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+td {
+  border-top: 1px solid #E3EBEB;
+}
+
+tbody tr:hover {
+  background-color: #F4F4F4;
+}
+
+/* botões dentro da tabela */
+td button,
+td .botao {
+  width: auto;
+  margin: 0 8px 0 0;
+  padding: 6px 16px;
+  font-size: 14px;
+}
+
+td .botao {
+  background-color: #E3EBEB;
+  color: #002726;
+}
+
+td .botao:hover {
+  background-color: #B9C9C9;
+}
+
+/* etiqueta de status */
+.status {
+  display: inline-block;
+  padding: 2px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.status-ativo {
+  background-color: #93F574;
+  color: #002726;
+}
+
+.status-inativo {
+  background-color: #B9C9C9;
+  color: #40615E;
+}
+
+.lista-vazia {
+  display: none;
+  margin: 0;
+  padding: 16px;
+  color: #40615E;
+}
+
+/* Mensagens de sucesso e erro */
+.mensagem {
+  display: none;
+  width: 100%;
+  max-width: 960px;
+  padding: 12px 16px;
+  margin: 16px 0 0;
+  border-radius: 16px;
+  font-weight: 500;
+}
+
+.mensagem.sucesso {
+  display: block;
+  background-color: #93F574;
+  color: #002726;
+}
+
+.mensagem.erro {
+  display: block;
+  background-color: #FDECEC;
+  color: #B42318;
+}
+
+form .mensagem {
+  margin: 0 0 16px;
+}
+
+/* Carregando */
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 39, 38, 0.6);
+  z-index: 10;
+}
+
+.loading label {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* Login */
+.login-page {
+  align-items: stretch;
+}
+
+.login-imagem {
+  width: 50%;
+  min-height: 100vh;
+}
+
+.login-imagem img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* preenche sem deformar a imagem */
+  object-position: 60% center;
+  border-radius: 0 32px 32px 0;
+}
+
+.login-conteudo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 48px;
+}
+
+.login-marca p {
+  margin: 0;
+}
+
+.sistema-nome {
+  font-size: 24px;
+  font-weight: 700;
+  color: #002726;
+}
+
+/* barrinha verde embaixo do nome */
+.sistema-nome::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 4px;
+  margin-top: 8px;
+  border-radius: 999px;
+  background-color: #93F574;
+}
+
+.sistema-sub {
+  margin-top: 8px !important;
+  font-size: 15px;
+  color: #40615E;
+}
+
+/* centraliza o formulário no espaço que sobra */
+.login-conteudo form {
+  margin: auto;
+}
+
+/* celular: esconde a imagem */
+@media (max-width: 768px) {
+  .login-imagem {
+    display: none;
+  }
+
+  .login-conteudo {
+    width: 100%;
+    padding: 24px 16px;
+  }
+}

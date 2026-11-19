@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../index.css">
+  <title>Usuários</title>
+</head>
+
+<body class="home">
+  <header class="topo">
+    <h1>Usuários</h1>
+    <input type="search" id="pesquisa" class="pesquisa" placeholder="Pesquisar por ID ou nome">
+    <div class="acoes-topo">
+      <a class="botao" href="../registrar_usuario/cadastrarUser.html">+ Novo usuário</a>
+      <button type="button" id="logout" class="clean">Sair</button>
+    </div>
+  </header>
+
+  <div id="mensagem" class="mensagem"></div>
+
+  <div class="tabela-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Login</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="lista-usuarios"></tbody>
+    </table>
+    <p id="lista-vazia" class="lista-vazia">Nenhum usuário cadastrado.</p>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/13.3.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/13.3.0/firebase-auth-compat.js"></script>
+  <script src="../../firebase-init.js"></script>
+  <script src="../../authguard.js"></script>
+  <script src="../../loading.js"></script>
+  <script type="module" src="home.js"></script>
+</body>
+
+</html>

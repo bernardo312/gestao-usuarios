@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar - Gestão de Usuários</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="login-page">
+
+
+  <div class="login-imagem">
+    <img src="img/login.jpeg" alt="Lojista consultando o sistema em um tablet">
+  </div>
+
+
+  <main class="login-conteudo">
+    <header class="login-marca">
+      <p class="sistema-nome">Gestão de Usuários</p>
+      <p class="sistema-sub">Cadastro e controle de usuários</p>
+    </header>
+
+    <form>
+      <h1>Entrar</h1>
+      <div class="form-field">
+        <div>
+          <label for="email">Email:</label>
+        </div>
+        <input type="email" name="email" id="email" placeholder="Email" required>
+        <div class="error" id="email-invalido-erro">Email inválido</div>
+        <div class="error" id="email-requerido-erro">Email é obrigatório</div>
+      </div>
+      <div class="form-field">
+        <div>
+          <label for="password">Senha:</label>
+        </div>
+        <input type="password" name="password" id="password" placeholder="Senha" required>
+        <div class="error" id="password-requerido-erro">Senha é obrigatória</div>
+      </div>
+      <div>
+        <button type="button" disabled="true" id="login">Entrar</button>
+      </div>
+    </form>
+  </main>
+
+  <script type="module" src="index.js"></script>
+  <script src="loading.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/13.3.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/13.3.0/firebase-auth-compat.js"></script>
+  <script src="firebase-init.js"></script>
+</body>
+
+</html>
